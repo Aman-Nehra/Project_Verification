@@ -1,0 +1,1 @@
+This folder contains my self project on Automata Theory and Formal Languages . Under this project I studied Deterministic Finite Automaton, Non Deterministic Finite Automaton, regular expressions, Homomorphisms and Inverse Homomorphisms
