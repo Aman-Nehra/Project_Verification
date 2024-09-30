@@ -1,0 +1,4 @@
+This repository contains the necessary codes and reports of the projects that I have tagged as self project in my resume. Following are the projects with brief description:
+
+1. Introduction to Machine Learning : This project consistes of implementation of basic machine learning algorithms such as linear regression using gradient descent optimization, multiple regression using gradient descent optimization, time series regression using gradient descent optimization, K means clustering algorithm and also their visualization using graphs plotted by matplotlib.
+2. Automata Theory and Formal Language Analysis: This was a reading project in which I studied Deterministic Finite State Automaton , Non Deterministic Finite state Automaton , regular expressions, Homomorphism , Inverse Homomorphism , Regular and FO defined languages . I provided a report of this project which contains the summary of my readings.
