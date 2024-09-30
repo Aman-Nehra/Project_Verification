@@ -1,0 +1,1 @@
+This folder contains my self project on Marchine Learning . It includes K means clustering algorithm, linear regression using gradient descent optimization, multiple regression using gradient descent optimization and time series regression using gradient descent optimization
