@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css"> <!--linked login.css to apply styling-->
+    <link rel="icon" type="image/x-icon" href="Images/Screenshot 2024-04-15 192926.png"> <!--Favicon is inserted-->
+</head>
+<body>
+    <audio autoplay loop src="lovely-time-13003.mp3" type="audio/mp3"></audio>  <!-- audio tag to insert background music-->
+    <div id="main_heading">
+    <h1 id="heading"><i>LOVE LINK</i></h1>
+    </div>
+    <br><br><br><br><br><br><br><br> <!-- to make space between the animation and the heading so that it doesn't overlap -->
+
+    <img src="Images/Screenshot 2024-03-28 105202.png" id="heart" alt="image" width="180px"> <!--The image which is being animated by increment of scale -->
+    <br><br><br><br>   <!-- to make space between the animation and the div containing input credentials.-->
+    <div id="block">   <!-- the block containing input credentials -->
+    <br><br><br>
+    <p id="registered">If you are in search of love of your life fill the details below!!</p>
+    <label for="username" id="userLabel">Username :</label>
+    <input id="username" type="text" name="username" required>   <!-- input for username-->
+    <br><br>
+    <label for="password" id="passwordLabel">Password :</label>
+    <input id="password" type="password" name="password" required> <!-- input for password-->
+    <br><br>
+    
+    <button id="login" onmouseover="mOver(this)" onmouseout="mOut(this)" >LOGIN</button> <!-- login button which is blue in color but when mouse is over it then the color changes to red-->
+    <br><br>
+    <button id="forgot" onmouseover="mOver(this)" onmouseout="mOut(this)"><a href="forgot.html">Forgot Password ?</a></button>   <!-- forgot password button which is blue in color but when mouse is over it then the color changes to red and on clicking it goes to forgot.html page.-->
+    <br><br><br>
+    </div>
+    <p id="error"></p>  <!-- the paragraph to show error messages if the input credentials are wrong-->
+   
+    <script>
+        function mOver(obj){
+            obj.style.backgroundColor="red";   //onmouseover function
+            obj.style.height="45px";
+        } 
+        function mOut(obj){
+            obj.style.backgroundColor="rgba(9, 114, 175, 0.951)";  //onmouseout function. The fourth parameter  in color i.e. a is for opacity.
+            obj.style.height="35px";
+        }
+        
+    </script>
+    <script id="json-data" src="./login.json"></script> <!--login.json file is linked and given an id -->
+    <script src="login.js"></script> <!--login.js is linked-->
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password ?</title>
+    <link rel="stylesheet" href="forgot.css">
+</head>
+
+<body>
+
+    <h1 id="heading"><i>FORGOT PASSWORD ??</i></h1>
+    <img src="Images/Screenshot 2024-03-29 230309.png" alt="image" id="image" width="200px"> <!--an image is added-->
+    <br><br><br><br><br><br><br><br><br><br><br><br><!--providing the space between div and image to avoid overlapping-->
+    <div id="block">
+    <p id="line1">Answer the recovery question which will appear below correctly to get the password.</p>
+    <label for="username" id="userlabel">Username :</label>  <!--label for username-->
+    <input id="username" type="text" name="username" required>   <!--input box for username-->
+    <br><br>
+    <p id="question"></p>
+    <button id="submit" onmouseover="mOver(this)" onmouseout="mOut(this)" onclick="exist()">SUBMIT</button>   <!--submit button which on clicking calls exist() function-->
+    <button id="back" onmouseover="mOver(this)" onmouseout="mOut(this)"><a href="login.html">Back</a></button>   <!--back button which takes you back to login screen-->
+    <p id="password"></p>  <!--paragraph tag to display the password-->
+    </div>
+    <audio autoplay loop src="lovely-time-13003.mp3" type="audio/mp3"></audio>   <!--audio tag to insert background music-->
+    <script id="json-data" src="./login.json"></script>    <!--linked login.json file and given an id-->
+    <script>
+        function mOver(obj) {
+            obj.style.backgroundColor = "red";    //onmouseover the size and color of the button changes
+            obj.style.height= "45px";
+        }
+        function mOut(obj) {
+            obj.style.backgroundColor = "rgba(9, 114, 175, 0.951)";    //onmouseout the size and color revert back to initial value
+            obj.style.height= "35px";
+        }
+        function exist() {
+            // Assuming you have an element with id "json-data"
+            var scriptElement = document.getElementById("json-data");
+
+            // Getting the source URL of the JSON file from the script tag
+            var jsonUrl = scriptElement.src;
+            // Making a fetch request to get the JSON data
+            fetch(jsonUrl)
+                .then(response => response.json())
+                .then(data => {
+                    let found;    //declared a variable found
+                    let present = false;
+                    for (x of data) {
+                        if (document.getElementById("username").value == x["username"]) {
+                            present = true;    //if provided username matches with some profile in data then present becomes true  
+                            found=x;    //store the data of correct user in the priorly declared variable
+                            break;   
+                        }
+                    }
+                    if (present == false) {      //if after iterating over all the profiles of data present is still false then the user doesn't exist
+                        document.getElementById("password").innerHTML = "This user doesn't exists";
+                    }
+                    else {   //if present become true then a secret question is asked
+                        document.getElementById("question").innerHTML = 'SECRET QUESTION:<br>'+ found["secret_question"] + '<br>' + '<label for="answer" id="answerlabel">ANSWER:</label>' + '<input id="answer" type="text" name="answer">' + '<br>'+ '<br>' + '<button id="button" onmouseover="mOver(this)" onmouseout="mOut(this)" onclick="recover()">Get Password</button>';
+                    }   //Get Password button which on clicking calls recover() function
+
+                })
+        }
+        function recover() {
+            // Assuming you have an element with id "json-data"
+            var scriptElement = document.getElementById("json-data");
+
+            // Getting the source URL of the JSON file from the script tag
+            var jsonUrl = scriptElement.src;
+            // Making a fetch request to get the JSON data
+            fetch(jsonUrl)
+                .then(response => response.json())
+                .then(data => {
+                    for (x of data) {
+                        if (document.getElementById("username").value == x["username"]) { //if username and secret answer are correct then password is provided
+                            if (document.getElementById("answer").value == x["secret_answer"]) {
+                                document.getElementById("password").innerHTML = "Your Password is : " + x["password"];
+                            }
+                            else {  //if the secret answer is incorrect then a message  is shown
+                                document.getElementById("password").innerHTML = "Sorry, the answer is incorrect "
+                            }
+                        }
+                    }
+
+                })
+        }
+
+
+    </script>
+
+</body>
+
+</html>

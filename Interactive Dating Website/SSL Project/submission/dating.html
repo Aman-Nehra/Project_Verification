@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <link rel="icon" type="image/x-icon" href="Screenshot 2024-04-15 192926.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>
+
+        <h1 id="heading"><i>Find a Match</i></h1>
+    </div>
+    <div id="block">
+        <form id="form">  <!--creating the form-->
+            <label for="photo" class="label">Photo :</label>
+            <input type="file" id="photo" name="photo" class="input">
+            <br><br>
+            <label for="rollNumber" class="label">IITB Roll Number :</label>
+            <input id="rollNumber" type="text" name="rollNumber" class="input">
+            <br><br>
+            <label for="name" class="label">Name :</label>
+            <input id="name" type="text" name="name" class="input">
+            <br><br>
+            <label for="year" class="label">Year of Study :</label>
+            <input id="year" type="text" name="year" class="input">
+            <br><br>
+            <label for="age" class="label">Age :</label>
+            <input id="age" type="number" name="age" class="input">
+            <br><br>
+            <label for="gender" class="label">Gender :</label>
+            <br>
+            <input id="gender" type="radio" name="gender" class="input" value="Male">  <!--radio buttons are used for gender to select only one gender-->
+            <label for="gender" class="label">Male</label>
+
+            <input id="gender" type="radio" name="gender" class="input" value="Female">
+            <label for="gender" class="label">Female</label>
+
+            <input id="gender" type="radio" name="gender" class="input" value="Other">
+            <label for="gender" class="label">Other</label>
+
+            <br><br>
+            <label for="email" class="label">Email :</label>
+            <br><br>
+            <input id="email" type="email" name="email" class="input">
+            <br><br>
+
+            <label for="interests" class="label">Interests :</label>  <!--checkboxes used for interests-->
+            <br><br>
+            <input id="Travelling" type="checkbox" name="check" class="input" value="Travelling">
+            <label for="Travelling" class="label">Travelling</label>
+
+            <input id="Sports" type="checkbox" name="check" class="input" value="Sports">
+            <label for="Sports" class="label">Sports</label>
+
+            <input id="Movies" type="checkbox" name="check" class="input" value="Movies">
+            <label for="Movies" class="label">Movies</label>
+
+            <input id="Music" type="checkbox" name="check" class="input" value="Music">
+            <label for="Music" class="label">Music</label>
+
+            <input id="Literature" type="checkbox" name="check" class="input" value="Literature">
+            <label for="Literature" class="label">Literature</label>
+
+            <input id="Technology" type="checkbox" name="check" class="input" value="Technology">
+            <label for="Technology" class="label">Technology</label>
+
+            <input id="Fashion" type="checkbox" name="check" class="input" value="Fashion">
+            <label for="Fashion" class="label">Fashion</label>
+
+            <input id="Art" type="checkbox" name="check" class="input" value="Art">
+            <label for="Art" class="label">Art</label>
+            <br><br>
+            <label for="hobbies" class="label">Hobbies :</label>  <!--checkboxes used for hobbies-->
+            <br><br>
+            <input id="Reading" type="checkbox" name="Reading" class="input" value="Reading">
+            <label for="Reading" class="label">Reading</label>
+
+            <input id="Cooking" type="checkbox" name="Cooking" class="input" value="Cooking">
+            <label for="Cooking" class="label">Cooking</label>
+
+            <input id="Coding" type="checkbox" name="Coding" class="input" value="Coding">
+            <label for="Coding" class="label">Coding</label>
+
+            <input id="Gardening" type="checkbox" name="Gardening" class="input" value="Gardening">
+            <label for="Gardening" class="label">Gardening</label>
+
+            <input id="Painting" type="checkbox" name="Painting" class="input" value="Painting">
+            <label for="Painting" class="label">Painting</label>
+
+            <input id="Watching_Youtube_Instagram" type="checkbox" class="input" name="Watching_Youtube_Instagram"
+                value="Watching_Youtube_Instagram">
+            <label for="Watching_Youtube_Instagram" class="label">Watching Youtube/Instagram</label>
+
+            <input id="Playing_musical_instruments" type="checkbox" class="input" name="Playing_musical_instruments"
+                value="Playing musical instruments">
+            <label for="Playing_musical_instruments" class="label">Playing musical instruments</label>
+            <br>
+            <input id="Photography" type="checkbox" name="Photography" class="input" value="Photography">
+            <label for="Photography" class="label">Photography</label>
+            <br><br>
+            <button type="button" id="Submit" onmouseover="mOver(this)" onmouseout="mOut(this)">Find a Match</button>  <!--Find a match button which onclicking calls perfectMatch() function-->
+            <button id="Scroll" onmouseover="mOver(this)" onmouseout="mOut(this)"><a href="scroll_or_swipe.html">Scroll
+                    through Profiles!</a></button>   <!--Scroll through Profiles button which on clicking opens scroll_or_swipe.html-->
+            <button id="logout" onmouseover="mOver(this)" onmouseout="mOut(this)"><a
+                    href="login.html">Logout</a></button>  <!--logout button which on cliking goes back to the login page-->
+        </form>
+    </div>
+    <h1 id="match"></h1>  <!--heading to show "PERFECT MATCH"-->
+    <audio autoplay loop src="lovely-time-13003.mp3" type="audio/mp3"></audio>  <!-- audio tag to insert background music-->
+    <script>
+        function mOver(obj) {
+            obj.style.height = "50px";    //onmouseover function which changes the color and the size of the button when the mouse is hovered over thhe button.
+            obj.style.backgroundColor = "red";
+        }
+        function mOut(obj) {
+            obj.style.height = "40px";  //onmouseout function which revert back the color and size when mouse is removed
+            obj.style.backgroundColor = "rgb(87, 107, 169)";
+        }
+    </script>
+    <script id="json-data" src="./students.json"></script> <!--students.json file linked to dating.html and an id is given to it-->
+    <script src="script.js"></script>  <!--script.js linked to dating.html-->
+</body>
+
+</html>

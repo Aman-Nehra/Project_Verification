@@ -1,0 +1,122 @@
+body{
+    background-image: url('Images/dating_background.jpg'); /* background image is inserted */
+    background-repeat: no-repeat; /* the background image should not repeat */
+    background-attachment: fixed; /* background image will not move on scrolling */
+    background-size: 100% 100%; /* background image will cover whole background */
+}
+#heading{
+    border-radius: 10px;
+    text-align: center;
+    margin-left: 35%;
+    margin-right: 20%;
+    background-color: rgba(160, 120, 45,0.8);
+    width: 30%;
+    opacity: 0.8;
+}
+#form{
+    text-align: center;
+    
+}
+/*for all the labels of the form*/
+.label{
+    font-family: cursive;
+    font-style: italic;
+    font-weight: 300;
+    font-size: x-large;
+}
+/*find a match button*/
+#Submit{
+    border-width: 3px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: rgb(87, 107, 169);
+    color: white;
+} 
+/*all the input boxes*/  
+.input{
+    border-radius: 5%;
+}
+/*Scroll through Profiles button*/
+#Scroll{
+    border-width: 3px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: rgb(87, 107, 169);
+    color: white;
+}
+/*logout button*/
+#logout{
+    border-width: 3px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: rgb(87, 107, 169);
+    color: white;
+}
+a{
+    text-decoration: none;      /*to remove the underline of the link*/
+    color: white;
+}
+/*the heading perfect match*/
+#match{
+    text-align: center;
+    
+    border-radius: 10px;
+    margin-left: 35%;
+    margin-right: 20%;
+    background-color: rgba(160, 120, 45,0.8);
+    width: 30%;
+    opacity: 0.8;
+}
+/*the profile of the perfect match*/
+#profile{
+    width: 40%;
+    background-color: rgba(240, 248, 255,0.8);;
+    border-radius: 5%;
+    text-align: center;
+    font-family: cursive;
+    font-size: large;
+    color: black;
+    font-weight: 500;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /*adding box shadow*/
+    margin-left: 30%;
+    animation: fade-up 2s;
+    opacity: 0.8;
+}
+/*photo of the perfect match*/
+#photo_match{
+    border-radius: 10%;
+    border-style: solid;
+    border-color: black;
+}
+
+#block{
+    width: 40%;
+    background-color: rgba(240, 248, 255,0.8);
+    border-radius: 5%;
+    margin-left: 30%;
+    animation: fade-up 2s;
+    opacity: 0.8;
+}
+/*the div translates smoothly in Y-axis when the page is loaded*/
+@keyframes fade-up {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
+/*paragraph to show message when no match is found when not a single interest is common*/
+#sorry{
+    border-radius: 10%;
+}
+/*for send  email button*/
+#send{
+    border-width: 3px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: rgb(87, 107, 169);
+    color: white;
+}

@@ -1,0 +1,141 @@
+body{
+    background-color:black;
+    background-image: url('Images/login_background.jpg');  /* background image is inserted */
+    background-repeat: no-repeat; /* the background image should not repeat */
+    background-attachment: fixed; /* background image will not move on scrolling */
+    background-size: 100% 100%;  /* background image will cover whole background */
+}
+/*the div containing the heading*/
+#main_heading{
+    text-align: center;
+    margin-right: 10%;
+    margin-left: 30%;
+}
+#heading{
+    border-style: solid;
+    border-radius: 10px;
+    width: 60%;
+    background-color: rgba(235,33,124,0.8); /* a is for opacity */
+    padding-left: -20%;
+    opacity: 0.8;
+    font-family: cursive;
+}
+
+#registered{
+    text-align: center;
+    font-family: cursive;
+    font-weight: 500;
+    font-size: large;
+    color: black;
+}
+#userLabel{
+    padding-left: 20%;
+    font-family: cursive;
+    font-weight: 500;
+    color: black;
+    font-size: large;
+}
+#passwordLabel{
+    padding-left: 20%; 
+    font-family: cursive;
+    font-weight: 500;
+    color: black;
+    font-size: large;
+}
+/*input box for  password*/
+#password{
+    border-style: solid;
+    border-radius: 5%;
+    border-color: black;
+
+}
+/*input box for username*/
+#username{
+    border-style: solid;
+    border-radius: 5%;
+    border-color: black;  
+}
+/* login button */
+#login{
+    margin-left: 43.5%;
+    border-radius: 10px;
+    height: 35px;
+    background-color: rgba(9, 114, 175, 0.951);
+    color: white;
+    font-family: cursive;
+    font-weight: 500;
+}
+#notRegistered{
+
+    text-align: center;
+    font-family: cursive;
+    font-size: large;
+    color:black;
+}
+/* forgot password button */
+#forgot{
+    margin-left: 36%;
+    font-family: cursive;
+    font-weight: 500;
+    border-radius: 10px;
+    background-color: rgba(9, 114, 175, 0.951);
+    height: 35px;
+    color: white;
+    font-family: cursive;
+}
+#heart{
+    margin-left: 42%;
+    border-style: solid;
+    border-radius: 10%;
+    position: absolute;
+    top: 12%;
+    left: 1%;
+    animation-name: heartAnimate ;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+    animation-timing-function: ease;
+}
+/* to print the error message when incorrect credentials are provided */
+#error{
+    text-align: center;
+    color: black;
+    border-radius: 3%;
+    background-color: rgba(240, 248, 255,0.9);
+    width: 20%;
+    margin-left:38% ;
+    font-family: cursive;
+    font-size: large;
+    opacity: 0.9;
+}
+/* the image containing  heart is animated such that its scale increases and decreases periodically for an infinite loop*/
+@keyframes heartAnimate{
+    form{transform: scale(1);          
+           }
+    to{transform: scale(1.35);
+    }
+}
+a{
+    text-decoration: none;    /*to remove the underline of the link*/
+    color: white;
+}
+#block{
+    background-color: rgba(240, 248, 255,0.9);
+    height:35%;
+    width: 35%;
+    margin-left: 32%;
+    border-radius: 5%;
+    animation: fade-up 2s;
+    opacity: 0.9;           /* to make the div translucent */
+}
+/* The div containing the input credentials translates smoothly in Y-axis when the page is loaded*/
+@keyframes fade-up {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}

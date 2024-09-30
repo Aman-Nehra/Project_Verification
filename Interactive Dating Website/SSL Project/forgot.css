@@ -1,0 +1,130 @@
+body{
+    background-image: url('Images/forgot_background.jpg'); /* background image is inserted */
+    background-repeat: no-repeat; /* the background image should not repeat */
+    background-attachment: fixed; /* background image will not move on scrolling */
+    background-size: 100% 100%;  /* background image will cover whole background */
+
+}
+
+#heading{
+    border-style: solid;
+    width: 30%;
+    margin-left: 32.5%;
+    border-radius: 20px;
+    background-color: rgb(235, 33, 124);
+    text-align: center;
+}
+#line1{
+    text-align: center;
+    font-family: cursive;
+    font-size: x-large;
+    color: black;
+}
+/* label for answer */
+#answerlabel{
+    padding-left: 10%;
+    font-family: cursive;
+    font-size: x-large;
+    color: black;
+} 
+/* label for username*/
+#userlabel{
+    padding-left: 30%;
+    font-family: cursive;
+    font-size: x-large;
+    color: black;
+}
+/* secret question */
+#question{
+    text-align: center;
+    font-family: cursive;
+    font-size: x-large;
+    color: black;
+}
+/*get password button*/
+#button{
+    margin-left: 5%;
+    border-radius: 10px;
+    height: 35px;
+    background-color: rgba(9, 114, 175, 0.951);
+    color: white;
+    font-family: cursive;
+}
+/*submit button*/
+#submit{
+    margin-left: 43%;
+    border-radius: 10px;
+    height: 35px;
+    background-color: rgba(9, 114, 175, 0.951);
+    color: white;
+    font-family: cursive;
+}
+/* back button */
+#back{
+    border-radius: 10px;
+    height: 35px;
+    background-color: rgba(9, 114, 175, 0.951);
+    color: white;
+    font-family: cursive;
+}
+/*input box for username*/
+#username{
+    border-width: 5px;
+    border-radius: 5px;
+    border-color: cornflowerblue;
+}
+/*input box for secret answer*/
+#answer{
+    border-width: 5px;
+    border-radius: 5px;
+    border-color: cornflowerblue;
+}
+/* the image of a boy thinking about the password*/
+#image{
+    position: absolute;
+    left: 42%;
+    border-style: solid;
+    border-radius:10% ;
+    border-width: 7px;
+    border-color: blue;
+    animation-name: borderAnimate;
+    animation-duration:500ms;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+}
+/*animation in which the color of border of the image changes from orange to a specified color very rapidly for infinte loop*/
+@keyframes borderAnimate{
+    from{border-color: orange;}
+    to{border-color: rgb(171, 129, 51);}
+}
+/*for showing the password*/
+#password{
+    text-align: center;
+    font-family: cursive;
+    font-size: x-large;
+    color: black;
+}
+/*the div containing all the input boxes*/
+#block{
+    background-color: rgba(240, 248, 255,0.9);
+    width: 40%;
+    margin-left: 30%;
+    border-radius: 5%;
+    animation: fade-up 2s;
+    opacity: 0.9;  /* opacity is decreased to make the div translucent */
+}
+/* The div containing the input boxes translates smoothly in Y-axis when the page is loaded*/
+@keyframes fade-up {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
+a{
+    color: white;
+    text-decoration: none; /*to remove the underline in the links*/
+}

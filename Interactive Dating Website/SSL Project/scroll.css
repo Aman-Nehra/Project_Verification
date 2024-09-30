@@ -1,0 +1,100 @@
+/*for profile container which contains profiles of all the students*/
+.profiles-container {
+    width: 100%;
+    overflow-y: scroll;
+    height: 100%; /* Set the desired height */
+    background-image: url('Images/scroll_background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+/*for each profile*/
+.profile {
+    /* Style each profile card */
+    text-align: center;
+    width: 40%;
+    font-size: large;
+    font-family: cursive;
+    border-radius: 5%;
+    margin-left: 30%;
+    margin-top: 2%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: rgba(240, 248, 255,0.9);
+    animation: fade-up 3s;
+    opacity: 0.9;
+}
+/*for profle photo of all the students*/
+.photo{
+    position:absolute;
+    left:0%;
+    border-radius: 10%;
+    position: relative;
+}
+/*for the  heading background */
+#headingContainer{
+    background-image: url('Images/upper_background.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+/*for the heading*/
+#heading{
+    border-radius: 10%;
+    background-color: rgba(160, 120, 45,0.8);
+    text-align: center; 
+    color: rgb(5, 244, 220); 
+    height: 50px;
+    font-family: cursive;
+    width: 30%;
+    margin-left: 30%;
+    opacity: 0.8;
+}
+/*for the navigation bar*/
+#navigation{
+height: 30px;
+background-image: url('Images/upper_background.png');
+color: goldenrod;
+padding-top: 0.5px;
+padding-bottom: 0.5px;
+font-size: 15px;
+border-top-style: solid;
+border-color: yellow;
+}
+/*for the unordered list in navigation bar*/
+nav ul{
+    display: flex;
+    align-items: center;
+    margin-left: 0;
+}
+/*for the list items of the unordered list in navigation bar*/
+nav ul li{
+    padding: 0px 15px 15px;
+    list-style: none;
+    margin-top: -10px;
+    margin-left: 0;
+}
+/*for the anchor tag*/
+a{
+    text-decoration: none; /*to remove the underline of the link*/
+    color: goldenrod;
+    font-size: 15px;
+    font-family: cursive;
+    font-weight: 600;
+}
+/*for the gender filter*/
+#filter1{
+    font-family: cursive;
+    font-size: 15px;
+    font-weight: 600;
+}
+/*The div containing the input boxes translates smoothly in Y-axis when the page is loaded*/
+@keyframes fade-up {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
